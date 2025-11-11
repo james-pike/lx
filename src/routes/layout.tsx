@@ -17,7 +17,7 @@ export default component$(() => {
   });
   return (
     <>
-      <main class="mt-0 px-4 md:px-0">
+      <main class="mt-0 px-0 md:px-0">
         <Slot />
       </main>
       <Footer />

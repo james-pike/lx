@@ -1,117 +1,44 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 
 export default component$(() => {
+  const currentCharacter = useSignal(1);
+
+  useVisibleTask$(() => {
+    const interval = setInterval(() => {
+      currentCharacter.value = (currentCharacter.value % 10) + 1;
+    }, 300); // Change character every 300ms for quick movement
+
+    return () => clearInterval(interval);
+  });
+
   return (
-    <section class="relative overflow-hidden md:min-h-[900px] min-h-[600px] -mx-4">
-      {/* Background with MP4 video */}
-      <div class="absolute inset-0 opacity-80 " aria-hidden="true">
-        <video
-          autoplay
-          loop
-          muted
-          playsInline
-          class="w-full h-full object-cover"
-        >
-          <source src="/images/hero.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <section class="bg-[#70C7BA]  flex flex-col">
+      {/* Banner Section */}
+   
 
-      {/* Floating decorative elements */}
-      {/* <div class="absolute top-0 left-80 w-[600px] h-[600px] bg-primary-200 rounded-full blur-xl animate-float" aria-hidden="true"></div> */}
-
-      <div class="grid grid-cols-1 md:grid-cols-1 items-center bg-transparent h-full">
-        {/* Mobile Logo */}
-      
-
-        {/* Text Content */}
-        <div class="relative z-20 order-1 md:col-span-2 flex items-center justify-center px-4 md:px-0 pt-16 md:pt-0 pb-10 md:order-1 min-h-[100vh]">
-          <div class="text-center md:text-left   py-8 px-6 bg-white/50">
-            {/* Headline (Desktop only) */}
-            <h1 class=" text-5xl text-center md:text-7xl font-bold tracking-tight md:mb-4 mb-8">
-              <span class="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
-                KASLANDS
-              </span>
-            </h1>
-            {/* Subtitle */}
-            <p class="text-xl -mx-2 md:text-2xl font-light text-primary-800 mb-6 max-w-2xl md:mx-0">
-Uniting Kaspa projects & members to create the ultimate virtual community. All things Kaspa web3 related, Tokens, NFTs, $KAS Metaverse, Websites, & Games.            </p>
-            <a
-              href="#"
-              class="w-full sm:w-auto my-1.5 mx-1 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-xl font-semibold text-white rounded-xl shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
-              role="button"
-              aria-label="Book a workshop"
-            >
-              <span class="relative z-10 flex items-center gap-1">
-                Get $BMT
-                <img
-                  src="/images/sticker.webp"
-                  alt="Jar Icon"
-                  class="w-8 h-8 -ml-1 transform transition-transform duration-300 group-hover:-rotate-2 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </span>
-              <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
-              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
-            </a>
-
-            <a
-              href="#"
-              class="w-full sm:w-auto bg-gradient-to-r my-1.5 mx-1 from-primary via-primary/40 to-primary group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-xl font-semibold text-white rounded-xl shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
-              role="button"
-              aria-label="Join Telegram"
-            >
-              <span class="relative z-10 flex items-center gap-1">
-                Join Telegram
-                <svg
-                  width="30px"
-                  height="30px"
-                  viewBox="0 0 24 24"
-                  fill="#56a4c8"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
-                      fill="#ffffff"
-                    ></path>
-                  </g>
-                </svg>
-              </span>
-              <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
-              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
-            </a>
-
-            <a
-              href="#"
-              class="w-full sm:w-auto bg-gradient-to-r my-1.5 mx-1 from-yellow-300 via-yellow-200 to-yellow-300 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-xl font-semibold text-white rounded-xl shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
-              role="button"
-              aria-label="Follow"
-            >
-              <span class="relative z-10 flex items-center gap-1">
-                Follow
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#000000"
-                  class="bi bi-twitter-x"
-                  viewBox="0 0 16 16"
-                  id="Twitter-X--Streamline-Bootstrap"
-                  height="24"
-                  width="24"
-                >
-                  <path
-                    d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z"
-                    stroke-width="1"
-                  ></path>
-                </svg>
-              </span>
-              <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
-              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
-            </a>
-          </div>
+      {/* Character Carousel */}
+      <div class="flex-1 flex flex-col items-center  px-4 md:py-12">
+        <div class="md:mb-12 relative w-full h-80 flex items-center justify-center">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+            <img
+              key={num}
+              src={`/images/c${num}.png`}
+              alt={`Character ${num}`}
+              class={`absolute w-full h-full object-contain transition-opacity duration-150 ${
+                currentCharacter.value === num ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+        </div>
+<p class="pt-4 px-2 text-lg text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatibus accusamus un autre fugiat molestias eos! </p>
+        {/* Action Buttons */}
+        <div class="flex gap-6 flex-wrap justify-center py-4 pb-8">
+          <button class="px-8 py-4 bg-white text-primary-500 font-bold text-lg rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg">
+            MINT
+          </button>
+          <button class="px-8 py-4 bg-yellow-400 text-gray-900 font-bold text-lg rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg">
+            Get $LION
+          </button>
         </div>
       </div>
     </section>

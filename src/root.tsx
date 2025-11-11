@@ -90,7 +90,7 @@ export default component$(() => {
           type="image/svg+xml"
         />
       </head>
-      <body class="bg-white antialiased -mt-20">
+      <body class="bg-white antialiased ">
         <ThemeProvider
           attribute="class"
           enableSystem={false}
