@@ -5,7 +5,6 @@ import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
-import { useBannerLoader } from "~/routes/layout";
 
 const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signal<boolean> }) => {
   const openIndex = useSignal<number | null>(null);
@@ -122,7 +121,6 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
 
 export default component$(() => {
   const show = useSignal(false);
-  const banners = useBannerLoader(); // Ensure the banner loader is invoked
 
   const menuItems = [
     { title: "About", href: "/", hasSubmenu: false },
@@ -235,23 +233,7 @@ export default component$(() => {
             </div>
             {/* Banner with Added Border */}
             {/* Dynamic Open House Banner */}
-            {banners.value && (
-              <div class="mt-4 pt-5 px-5 border-t border-primary-200">
-                <div class="w-full px-5 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2">
-                  <div class="text-center">
-                    <h3 class="text-base font-bold text-gray-800 dark:text-gray-200">
-                      {banners.value.title || "Open House"}
-                    </h3>
-                    <p class="text-sm font-medium text-gray-600 dark:text-gray-300">
-                      {banners.value.subtitle}
-                    </p>
-                    <p class="text-sm mt-1">{banners.value.message}</p>
-                  </div>
-                  {/* Uncomment if you add a "More Info" link */}
-                  {/* <a href="mailto:hello@earthenvessels.ca" ... >More Info</a> */}
-                </div>
-              </div>
-            )}
+   
           </div>
 
           <Modal.Close
