@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { Tabs } from '../ui/Tabs';
 import { Card } from '../ui/Card';
 import FAQAccordion from './FAQAccordion';
-import Heading from './Heading';
+import Heading2 from './Heading2';
 
 // Create Qwik-compatible icon componentss
 // const PaintbrushIcon = component$(() => {
@@ -202,7 +202,7 @@ export default component$(() => {
     </div>
     <div class="max-w-5xl mx-auto">
     <Card.Root class="p-3 md:p-5">
-      <Heading/>  
+      <Heading2/>  
      
       <Tabs.Root class="-mt-3.5">
         <Tabs.List class="grid w-full grid-cols-4 text-xs">

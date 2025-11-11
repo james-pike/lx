@@ -10,7 +10,7 @@ export default component$(() => {
 
         <div>
           <div class="flex items-center">
-            <h4 class="text-2xl md:text-4xl pl-1 font-medium leading-none">Roadmap</h4>
+            <h4 class="text-3xl md:text-4xl font-medium leading-none">FAQs</h4>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 text-primary ml-1"
@@ -26,7 +26,7 @@ export default component$(() => {
               />
             </svg>
           </div>
-          {/* <p class="text-sm md:text-lg text-muted-foreground">Our process from start to finish.</p> */}
+          <p class="text-sm md:text-lg text-muted-foreground">Our process from start to finish.</p>
         </div>
 
         <div class="flex items-center">

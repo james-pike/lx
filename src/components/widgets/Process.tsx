@@ -186,50 +186,50 @@ export default component$(() => {
 const roadmapPhases = [
   {
     headline: 'Phase 1:',
-    title: 'Discovery & Strategy',
-    icon: '🎯',
-    description: 'Understand client goals, target audience, and competitive landscape to create a strategic foundation.',
+    title: 'The Pride Awakens',
+    icon: '🦁',
+    description: 'Launch the Lux Lions collection on Kaspa and establish our foundation with exclusive minting opportunities.',
     milestones: [
-      'Conduct stakeholder interviews ',
-      'Perform competitive analysis research',
-      'Define project goals, KPIs, success metrics',
-      'Create user personas, and content strategy',
+      'Genesis mint of 1000 unique Lux Lions',
+      'Launch $LION token on Kaspa',
+      'Activate Discord community with holder roles',
+      'List on major Kaspa NFT marketplaces',
     ],
   },
   {
     headline: 'Phase 2:',
-    title: 'Design & Prototyping',
-    icon: '🎨',
-    description: 'Transform strategy into visual concepts through wireframing, design systems, and interactive prototypes.',
+    title: 'Building the Kingdom',
+    icon: '👑',
+    description: 'Expand utility and rewards for our pride members through exclusive benefits and Kaspa ecosystem partnerships.',
     milestones: [
-      'Develop wireframes and architecture',
-      'Create high-fidelity mockup systems',
-      'Build interactive prototypes',
-      'Finalize visual  brand guidelines',
+      'Launch staking program with $LION rewards',
+      'Introduce exclusive merch store for holders',
+      'Collaborate with top Kaspa NFT projects',
+      'Host virtual gallery events in the metaverse',
     ],
   },
   {
     headline: 'Phase 3:',
-    title: 'Development & Integration',
-    icon: '⚙️',
-    description: 'Build responsive, performant websites with clean code, seamless integrations, and optimal functionality.',
+    title: 'The Luxury Safari',
+    icon: '✨',
+    description: 'Transform digital ownership into real-world experiences with luxury rewards and physical collectibles.',
     milestones: [
-      'Develop frontend with responsive layouts',
-      'Integrate APIs, and third-party services',
-      'Implement SEO best practices and standards',
-      'Conduct cross-browser and device testing',
+      'Launch physical collectible program',
+      'Partner with luxury brands for holder perks',
+      'Host exclusive IRL events in major cities',
+      'Airdrop rare companion NFTs to loyal holders',
     ],
   },
   {
     headline: 'Phase 4:',
-    title: 'Launch & Optimization',
+    title: 'Legacy & Beyond',
     icon: '🚀',
-    description: 'Deploy the website, ensure smooth performance, and provide ongoing support for continuous improvement.',
+    description: 'Establish Lux Lions as a lasting brand with gaming integration, DAO governance, and continuous innovation.',
     milestones: [
-      'Execute pre-launch checklist and final QA',
-      'Deploy to production and monitor performance',
-      'Provide client training and documentation',
-      'Offer ongoing maintenance, updates, and review',
+      'Launch play-to-earn game featuring Lions',
+      'Implement DAO for community governance',
+      'Create scholarship fund for digital artists',
+      'Expand into Gen 2 collection and ecosystem',
     ],
   },
 ];
@@ -254,7 +254,7 @@ const roadmapPhases = [
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-4 md:p-8 pt-5 max-w-6xl mx-auto">
+        <Card.Root class="p-4 md:p-8 pt-5 max-w-6xl border-2 bg-[#49EACB]/30 mx-auto">
         <Heading />
        <Carousel.Root 
   class="carousel-root" 

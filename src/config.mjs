@@ -1,12 +1,12 @@
 export const SITE = {
-  name: "Kaslands",
+  name: "Lux Lions",
 
   title:
-    "Kaslands" ,
+    "Lux Lions" ,
   description:
-    "Kaslands" ,
+    "Lux Lions" ,
 
-  origin: "https://earthenvessels.ca",
+  origin: "https://luxlions.io",
   basePathname: "/",
   trailingSlash: true,
 };

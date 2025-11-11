@@ -88,7 +88,7 @@ export default component$(() => {
         id="header"
         class={`
           sticky top-0 z-40 flex-none mx-auto max-w-7xl 
-          transition-all duration-300 ease-in-out border-b-4 border-primary-500
+          transition-all duration-300 ease-in-out  border-primary-500
           ${store.isScrolling
             ? "bg-[#70C7BA] md:bg-primary-100/80 dark:bg-primary-900/80 md:backdrop-blur-sm"
             : "bg-[#70C7BA]"
@@ -105,14 +105,14 @@ export default component$(() => {
         }}
       >
         <div class="absolute inset-0" aria-hidden="true"></div>
-        <div class="relative text-default py-1 md:p-1 px-1 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+        <div class="relative text-default py-0 md:p-1 px-1 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
           <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
             <a class="flex items-center " href="/">
                 <div class="w-full">
         <img 
           src="/images/banner.png" 
           alt="Banner" 
-          class=" h-16 object-cover"
+          class=" h-12 object-cover"
         />
       </div>
 

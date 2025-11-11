@@ -134,14 +134,14 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="absolute top-2 right-3  md:static">
+        <div class="absolute top-2 right-2  md:static">
           <Modal.Trigger
             class={cn(
-              "p-2 py-1 -mt-1 rounded-none border backdrop-blur-sm transition-all duration-300",
-              "bg-white/35 mb-1 border-primary-200 dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
+              "p-1 py-0 rounded-none border-2 backdrop-blur-sm transition-all duration-300",
+              "bg-[#70C7BA] mb-1 border-white dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
             )}
           >
-            <IconHamburger class="w-6 h-7 text-secondary-800/50 dark:text-secondary-200" />
+            <IconHamburger class="w-6 h-7 text-white dark:text-secondary-200" />
           </Modal.Trigger>
         </div>
 

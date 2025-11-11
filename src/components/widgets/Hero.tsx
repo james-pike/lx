@@ -17,7 +17,7 @@ export default component$(() => {
    
 
       {/* Character Carousel */}
-      <div class="flex-1 flex flex-col items-center  px-4 md:py-12">
+      <div class="flex-1 flex flex-col items-center  px-2 md:py-12">
         <div class="md:mb-12 relative w-full h-80 flex items-center justify-center">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
             <img
