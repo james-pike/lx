@@ -313,7 +313,7 @@ const roadmapPhases = [
             >
               <span
                 class={cn(
-                  'text-sm md:text-base font-medium px-3 py-1.5 rounded',
+                  '!text-lg md:text-base font-medium px-3 py-1 rounded',
                   selectedIndex.value === index ? 'bg-primary text-white' : 'bg-transparent'
                 )}
               >
@@ -324,14 +324,14 @@ const roadmapPhases = [
             </Carousel.Step>
             <Carousel.Slide
               style={space}
-              class="carousel-slide p-3 text-sm md:p-4 !mt-2 bg-primary/10 rounded-lg shadow-sm"
+              class="carousel-slide p-3 text-md md:p-4 !mt-2 bg-primary/10 rounded-lg shadow-sm"
               key={`slide-${index}`}
             >
               <div class="phase-content">
                 <p class="mb-3">{phase.description}</p>
                 <ul class="list-disc list-outside pl-5 space-y-1">
                   {phase.milestones.map((milestone, i) => (
-                    <li key={`milestone-${i}`} class="milestone-item text-sm leading-relaxed">
+                    <li key={`milestone-${i}`} class="milestone-item text-md leading-relaxed">
                       {milestone}
                     </li>
                   ))}
