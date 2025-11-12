@@ -7,7 +7,7 @@ import { Card } from '../ui/Card';
 export default component$(() => {
   useStyles$(styles);
 
-  const images = Array.from({ length: 10 }, (_, i) => `c${i + 1}.png`);
+  const images = Array.from({ length: 7 }, (_, i) => `c${i + 1}.png`);
   const isPlaying = useSignal<boolean>(false);
   const slidesPerViewSig = useSignal(1.3); // Default to 1.3 for mobile
 

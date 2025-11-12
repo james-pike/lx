@@ -115,7 +115,7 @@ export default component$(() => {
       left: 0;
       right: 0;
       height: 0%;
-      background: hsl(var(--primary));
+      background: #70C7BA;
       transition: height 3s linear;
       border-radius: inherit;
       z-index: 1;
@@ -127,7 +127,7 @@ export default component$(() => {
     }
     
     .progress-separator.user-controlled {
-      background: hsl(var(--primary)) !important;
+      background: #70C7BA !important;
     }
     
     .progress-separator.user-controlled::after {
@@ -135,7 +135,7 @@ export default component$(() => {
     }
     
     .progress-separator.completed {
-      background: hsl(var(--primary)) !important;
+      background: #70C7BA !important;
     }
     
     .progress-separator.completed::after {
@@ -259,7 +259,7 @@ export default component$(() => {
             title="Roadmap"
             subtitle="Our process from start to finish."
             icon={
-              <svg fill="#70C7BA" class="-mt-4" height="32px" width="32px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+              <svg fill="#70C7BA " class="-mt-4 " height="32px" width="32px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -296,8 +296,8 @@ export default component$(() => {
           >
             <div class="flex flex-row gap-5 w-full">
               <div
-                class="w-1/3 rounded hidden md:block aspect-square"
-                style={`background-color: hsl(var(--primary) / ${bgOpacity.value}%)`}
+                class="w-1/3 hidden md:block aspect-square bg-lux-green"
+                style={`opacity: ${bgOpacity.value}%`}
               />
               <div class="flex flex-row items-start w-full md:flex-1">
                 {/* Vertical progress line */}
@@ -305,13 +305,13 @@ export default component$(() => {
                   {roadmapPhases.map((_, index) => (
                     <>
                       <div
-                        class="w-1 h-0 bg-gray-200 rounded-full"
+                        class="w-1 h-0 bg-gray-200"
                         style={{ marginTop: index === 0 ? '1rem' : '0.5rem' }}
                         key={`spacer-${index}`}
                       />
                       {index < roadmapPhases.length && (
                         <div
-                          class={`progress-separator w-1 h-4 rounded-full ${userHasInteracted.value
+                          class={`progress-separator w-1 h-4 ${userHasInteracted.value
                               ? progressIndex.value >= index ? 'user-controlled' : ''
                               : progressIndex.value > index
                                 ? 'completed'
@@ -335,26 +335,26 @@ export default component$(() => {
                         class="flex items-start justify-start cursor-pointer"
                         key={`step-${index}`}
                         onClick$={() => {
-                          console.log(`Clicked index: ${index}`); // Debug click
-                          userHasInteracted.value = true; // Mark as user-controlled
-                          isPlaying.value = false; // Stop autoplay
-                          selectedIndex.value = index; // Manually update selected index
+                          console.log(`Clicked index: ${index}`);
+                          userHasInteracted.value = true;
+                          isPlaying.value = false;
+                          selectedIndex.value = index;
                         }}
                       >
                         <span
                           class={cn(
-                            '!text-lg md:text-base font-medium px-3 py-1 rounded',
-                            selectedIndex.value === index ? 'bg-primary text-white' : 'bg-transparent'
+                            '!text-lg md:text-base font-medium px-3 py-1',
+                            selectedIndex.value === index ? 'bg-lux-green text-white' : 'bg-transparent'
                           )}
                         >
-                          <span class="rounded-l-base bg-white/40 py-1 pl-2 -ml-2 mr-1.5 "> {phase.headline} </span>
+                          <span class="bg-white/40 py-1 pl-2 -ml-2 mr-1.5"> {phase.headline} </span>
                           {phase.title}
                           <span class="ml-1">{phase.icon}</span>
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
                         style={space}
-                        class="carousel-slide p-3 text-md md:p-4 !mt-2 bg-primary/10 rounded-lg shadow-sm"
+                        class="carousel-slide p-3 text-md md:p-4 !mt-2 bg-lux-green/10 shadow-sm"
                         key={`slide-${index}`}
                       >
                         <div class="phase-content">

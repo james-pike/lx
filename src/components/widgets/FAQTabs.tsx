@@ -11,12 +11,12 @@ export default component$(() => {
     answer: "Lux Lions are an exclusive NFT collection on the Kaspa blockchain, featuring 1,000 unique digital lion artworks that blend luxury aesthetics with blockchain innovation. Each NFT represents a majestic lion in various regal poses and environments, designed to appeal to collectors who value artistry, scarcity, and community-driven projects."
   },
   {
-    question: "How many NFTs are in the Lux Lions collection?",
+    question: "How many NFTs are in the Lions collection?",
     answer: "The Lux Lions collection consists of exactly 1,000 unique NFTs. This limited supply ensures rarity and value appreciation for holders, with each piece hand-crafted by digital artists to capture the fierce elegance of lions in a futuristic, opulent style."
   },
   {
-    question: "What is the Lion token and its total supply?",
-    answer: "The Lion token (LION) is the native utility token for the Lux Lions ecosystem, with a fixed total supply of 10 million tokens. It powers staking rewards, governance voting, marketplace fees, and exclusive access to community events, fostering long-term engagement among holders."
+    question: "What is the $LION token and its total supply?",
+    answer: "The Lion token ($LION) is the native utility token for the Lux Lions ecosystem, with a fixed total supply of 10 million tokens. It powers staking rewards, governance voting, marketplace fees, and exclusive access to community events, fostering long-term engagement among holders."
   },
   {
     question: "What is the 10% buy and burn mechanism?",
@@ -27,7 +27,7 @@ export default component$(() => {
     answer: "Minting for Lux Lions opens in phases on the Kaspa network. Early access is available via whitelist for community members, followed by a public sale. Use your Kaspa wallet to connect to our official minting site, where each NFT costs a set amount in KAS. Secondary trading will be live on Kaspa-compatible marketplaces post-mint."
   },
   {
-    question: "What utilities and benefits do Lux Lions holders receive?",
+    question: "What utilities and benefits do holders receive?",
     answer: "Lux Lions holders gain access to exclusive perks, including airdrops of Lion tokens, VIP community governance, real-world merchandise drops, and collaborations with luxury brands. Staking your NFTs or tokens unlocks additional yields, while the collection supports charitable initiatives for wildlife conservation, aligning art with impact."
   }
 ];

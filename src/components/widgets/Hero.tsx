@@ -44,11 +44,11 @@ export default component$(() => {
                 >
                   <span class="relative z-10 flex items-center gap-1">
                     MINT
-                    <img
-                      src="/images/sticker.webp"
-                      alt="Jar Icon"
-                      class="w-6 h-6 -ml-1 transform transition-transform duration-300 group-hover:-rotate-2 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
+                  <img
+  src="/images/logo.png"
+  alt="Jar Icon"
+  class="w-7 h-7  transform transition-transform duration-300 group-hover:scale-110 group-active:scale-100"
+/>
                   </span>
                   <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
                   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
