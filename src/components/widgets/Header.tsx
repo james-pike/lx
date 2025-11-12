@@ -112,7 +112,7 @@ export default component$(() => {
         <img 
           src="/images/banner.png" 
           alt="Banner" 
-          class=" h-16 object-cover"
+          class=" h-14 object-cover"
         />
       </div>
 
