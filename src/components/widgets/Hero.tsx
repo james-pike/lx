@@ -33,29 +33,38 @@ export default component$(() => {
             />
           ))}
         </div> */}
-        <p class="pt-6 px-2 text-white text-3xl text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit et Illo voluptatibus accusamus. </p>
+        <p class="pt-6 px-2 text-white text-3xl text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit et Illo voluptatibus accusamus et un autre. </p>
         {/* Action Buttons */}
         <div class="flex gap-6 flex-wrap justify-center py-6 pb-10">
-         <a
+        <a
                   href="#"
-                  class="px-2 hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold text-white  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
+                  class=" hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
                   role="button"
-                  aria-label="Book a workshop"
+                  aria-label="Mint NFT"
                 >
-                  <span class="relative z-10 flex items-center gap-1">
+                  <span class="relative px-2 z-10 flex items-center gap-1">
                     MINT
-                  <img
-  src="/images/logo.png"
-  alt="Jar Icon"
+                    <img
+                      src="/images/logo.png"
+                      alt="Jar Icon"
   class="w-7 h-7  transform transition-transform duration-300 group-hover:scale-110 group-active:scale-100"
-/>
+                    />
                   </span>
                   <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
                   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
                 </a>
-          <button class="px-8 py-3 bg-[#b26122] text-gray-900 font-bold text-xl rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg">
-            Get $LION
-          </button>
+          <a
+                  href="#"
+                  class=" hover:bg-yellow-300 bg-[#b26122] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold text-white shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
+                  role="button"
+                  aria-label="Get $LION token"
+                >
+                  <span class="relative z-10 flex items-center gap-1">
+                    Get $LION
+                  </span>
+                  <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
+                </a>
         </div>
       </div>
     </section>
