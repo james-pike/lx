@@ -6,6 +6,7 @@ import Reviews from "~/components/widgets/Reviews";
 import FAQTabs from "~/components/widgets/FAQTabs";
 import Hero from "~/components/widgets/Hero";
 import Services from "~/components/widgets/Services";
+import Rarity from "~/components/widgets/Rarity";
 
 
 export default component$(() => {
@@ -14,7 +15,7 @@ export default component$(() => {
     <Hero/>
     {/* <Services/> */}
       <Process/>
-    
+    <Rarity/>
       <Reviews/>
       <FAQTabs/>
       <Services/>

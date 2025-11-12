@@ -4,6 +4,7 @@ import styles from './carousel.css?inline';
 import { Card } from '../ui/Card';
 import Heading from './Heading';
 import { Wrapper } from './Wrapper';
+import RarityCheck from './RarityCheck';
 
 export default component$(() => {
   useStyles$(styles);
@@ -32,37 +33,13 @@ export default component$(() => {
   });
 
   return (
-      <Wrapper>
-            <Card.Root class="p-4 md:p-8 pt-5 max-w-6xl mx-auto">
- <Heading 
-    />    <Carousel.Root
-      class="carousel-root"
-      slidesPerView={slidesPerViewSig.value}
-      gap={30}
-      autoPlayIntervalMs={5500}
-      bind:autoplay={isPlaying}
-    >
-      <Carousel.Scroller class="carousel-scroller">
-        {colors.map((color) => (
-          <Carousel.Slide key={color} class=" ">
-            <Card.Root>
-          
-            <img src={`/images/kaslands.jpeg`} class=" w-full object-cover"/>
-            </Card.Root>
-          </Carousel.Slide>
-        ))}
-      </Carousel.Scroller>
-      <div class="flex justify-center items-center gap-4">
-        <Carousel.Pagination class="carousel-pagination">
-          {colors.map((color, index) => (
-            <Carousel.Bullet class="carousel-pagination-bullet" key={color}>
-              {index + 1}
-            </Carousel.Bullet>
-          ))}
-        </Carousel.Pagination>
-      </div>
-    </Carousel.Root>
+      <div class="bg-[#f4b31d
+]">
+            <Card.Root class="p-0 md:p-8  max-w-6xl mx-auto">
+
+
+    <RarityCheck/>
     </Card.Root>
-    </Wrapper>
+    </div>
   );
 });
