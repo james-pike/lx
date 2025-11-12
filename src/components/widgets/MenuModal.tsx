@@ -147,15 +147,15 @@ export default component$(() => {
 
         <Modal.Panel
           position="left"
-          class="dark:bg-gray-950 border-r border-primary-200 overflow-y-auto max-h-[100vh]"
+          class="dark:bg-gray-950 border-r bg-[#70C7BA] border-primary-200 overflow-y-auto max-h-[100vh]"
         >
-          <div class=" border-primary-200 bg-white/30 dark:bg-gray-900 pt-2">
+          <div class=" border-primary-200 bg-white/30 dark:bg-gray-900 pt-0">
             <Modal.Title class="">
               <a href="/" class="focus:outline-none">
                 <img
                   src="/images/banner.png"
                   alt="BTC MAXI TEARS"
-                  class="w-full h-16 object-cover "
+                  class="w-auto h-14  "
                 />
               </a>
             </Modal.Title>
@@ -239,7 +239,7 @@ export default component$(() => {
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-8 top-5 text-primary-300 hover:text-primary-800 dark:text-white dark:hover:bg-gray-900"
+              "absolute right-8 top-2 text-primary-300 hover:text-primary-800 dark:text-white dark:hover:bg-gray-900"
             )}
             type="submit"
           >

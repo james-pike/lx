@@ -10,6 +10,12 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
+        min-height: 100%;
+    font-family: "VT323", monospace; /* Default font for all text */
+    /* Optional: Crisp pixel rendering for VT323 */
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+    image-rendering: pixelated; /* Helps on some browsers for monospace pixels */
   }
 
   p code {

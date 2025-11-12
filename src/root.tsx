@@ -41,56 +41,23 @@ export default component$(() => {
   return (
     <QwikCityProvider>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/manifest.json" />
-        {/* Preload Dancing Script weight 400 only */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=block"
-          as="style"
-        />
-        {/* Load all Dancing Script weights as stylesheet */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=block"
-          rel="stylesheet"
-        />
-        {/* Define font-face for weight 400 with font-display: block */}
-        <style>
-          {`
-            @font-face {
-              font-family: 'Dancing Script';
-              font-style: normal;
-              font-weight: 600;
-              src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Sup5.ttf') format('truetype');
-              font-display: block;
-            }
-          `}
-        </style>
-        {/* Load Della Respira normally */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap"
-          rel="stylesheet"
-        />
-        <RouterHead />
-        <ServiceWorkerRegister />
-        {/* Image preloads with correct types */}
-        <link
-          rel="preload"
-          href="/images/logo22.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-        <link rel="preload" href="/images/hero.webm" as="video" type="video/webm" />
-      
-        <link
-          rel="preload"
-          href="/images/logo2-cropped.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-      </head>
-      <body class="bg-white antialiased ">
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="/manifest.json" />
+  {/* Preload VT323 */}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"  />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  {/* Load Della Respira normally */}
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet" />
+  <RouterHead />
+  <ServiceWorkerRegister />
+  {/* Image preloads with correct types */}
+  <link rel="preload" href="/images/logo22.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="/images/hero.webm" as="video" type="video/webm" />
+  <link rel="preload" href="/images/logo2-cropped.svg" as="image" type="image/svg+xml" />
+</head>
+      <body class="bg-white antialiased sm:hidden ">
         <ThemeProvider
           attribute="class"
           enableSystem={false}

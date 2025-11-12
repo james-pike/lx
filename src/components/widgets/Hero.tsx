@@ -14,7 +14,11 @@ export default component$(() => {
   return (
     <section class="bg-[#70C7BA]  flex flex-col">
       {/* Banner Section */}
-   
+    <img 
+          src="/images/banner.png" 
+          alt="Banner" 
+          class=" md:h-60 h-20 hidden md:block "
+        />
 
       {/* Character Carousel */}
       <div class="flex-1 flex flex-col items-center  px-2 md:py-12">
