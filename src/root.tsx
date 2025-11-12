@@ -57,7 +57,7 @@ export default component$(() => {
   <link rel="preload" href="/images/hero.webm" as="video" type="video/webm" />
   <link rel="preload" href="/images/logo2-cropped.svg" as="image" type="image/svg+xml" />
 </head>
-      <body class="bg-white antialiased sm:hidden ">
+      <body class="bg-white antialiased hidden ">
         <ThemeProvider
           attribute="class"
           enableSystem={false}
