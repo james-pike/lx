@@ -31,12 +31,12 @@ export default component$(() => {
   });
 
   return (
-      <Card.Root class="p-1 md:p-8 bg-[#29b9b0] max-w-6xl mx-auto">
+      <Card.Root class="p-1.5 md:p-8 bg-[#29b9b0] max-w-6xl mx-auto">
         {/* <Heading /> */}
       <Carousel.Root
   class="carousel-root"
   slidesPerView={slidesPerViewSig.value}
-  gap={4}
+  gap={6}
   autoPlayIntervalMs={2500}
   bind:autoplay={isPlaying}
   draggable={true}
