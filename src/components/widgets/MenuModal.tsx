@@ -165,7 +165,7 @@ export default component$(() => {
             <div class="sm:max-w-md px-5 pt-4 flex flex-row items-center gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
-                  href="#"
+                  href="https://kaspa.com/nft/collections/LUXLIONS"
                   class="w-full hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
                   role="button"
                   aria-label="Mint NFT"
@@ -184,7 +184,7 @@ export default component$(() => {
               </div>
               <div class="flex-shrink-0">
                 <a
-                  href="#"
+                  href="https://lfg.kaspa.com/app/token/0x2e3bcFa281A70c09b83DeB5d6553e2130756905d"
                   class="w-full hover:bg-yellow-300 bg-[#b26122] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold text-white shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
                   role="button"
                   aria-label="Get $LION token"
