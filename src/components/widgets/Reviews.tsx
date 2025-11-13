@@ -9,7 +9,7 @@ export default component$(() => {
 
   const images = Array.from({ length: 7 }, (_, i) => `c${i + 1}.png`);
   const isPlaying = useSignal<boolean>(false);
-  const slidesPerViewSig = useSignal(1.3); // Default to 1.3 for mobile
+  const slidesPerViewSig = useSignal(2); // Changed from 1.3 to 2
 
   // Update slidesPerView based on screen size
   useVisibleTask$(({ cleanup }) => {
@@ -19,7 +19,7 @@ export default component$(() => {
       if (window.matchMedia('(min-width: 640px)').matches) {
         slidesPerViewSig.value = 2; // Larger screens
       } else {
-        slidesPerViewSig.value = 2; // Mobile
+        slidesPerViewSig.value = 2; // Mobile - or change this to 1.3 if you want mobile different
       }
     };
 
@@ -52,15 +52,6 @@ export default component$(() => {
               </Carousel.Slide>
             ))}
           </Carousel.Scroller>
-          {/* <div class="flex justify-center items-center gap-4">
-            <Carousel.Pagination class="carousel-pagination">
-              {images.map((image, index) => (
-                <Carousel.Bullet class="carousel-pagination-bullet" key={image}>
-                  {index + 1}
-                </Carousel.Bullet>
-              ))}
-            </Carousel.Pagination>
-          </div> */}
         </Carousel.Root>
       </Card.Root>
       <div class="h-6 bg-[#70C7BA]"></div>
