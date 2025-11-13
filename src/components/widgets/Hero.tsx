@@ -33,9 +33,9 @@ export default component$(() => {
             />
           ))}
         </div> */}
-        <p class="pt-8 px-2 text-white text-4xl text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit et Illo voluptatibus accusamus. </p>
+        <p class="pt-8 px-2 text-white text-4xl text-center"> Lorem ipsum dolor sit amet consect etur adipis icing elit et Illo voluptati accus. </p>
         {/* Action Buttons */}
-        <div class="flex gap-6 flex-wrap justify-center py-8 pb-10">
+        <div class="flex gap-6 px-2 flex-wrap justify-center py-8 pb-10">
         <a
                   href="https://kaspa.com/nft/collections/LUXLIONS"
                   class=" hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-2xl font-semibold  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
