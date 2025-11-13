@@ -39,10 +39,7 @@ export default component$(() => {
     },
   ];
 
-  const social = [
-    { label: "Telegram", icon: LuSend, href: "https://t.me/KasKritterzOfficial" },
-    { label: "X", icon: CustomTwitterIcon, href: "https://x.com/KasKritterz" },
-  ];
+
 
   return (
     <footer class="bg-[#70C7BA] bg-cover bg-center border-gray-300 dark:border-slate-700">
