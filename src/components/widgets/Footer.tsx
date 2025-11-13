@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { LuSend, LuStar, LuUsers } from "@qwikest/icons/lucide";
+import { LuStar, LuUsers } from "@qwikest/icons/lucide";
 
 // Import the CustomTwitterIcon component
 export const CustomTwitterIcon = component$(() => {
