@@ -68,10 +68,10 @@ export default component$(() => {
 
   const menu: { items: MenuItem[] } = {
     items: [
-      { text: "Story", href: "#" },
-      { text: "Roadmap", href: "#" },
-      { text: "Rarity Guide", href: "#" },
-      { text: "FAQ", href: "#" },
+      { text: "Story", href: "#story" },
+      { text: "Roadmap", href: "#roadmap" },
+      { text: "Rarity", href: "#rarity" },
+      { text: "FAQ", href: "#faq" },
     ],
   };
 
@@ -151,7 +151,7 @@ export default component$(() => {
             aria-label="Main navigation"
           >
             {menu && menu.items ? (
-              <ul class="flex flex-col md:flex-row text-primary-600 md:self-center w-full md:w-auto text-xl md:text-2xl tracking-[0.01rem] font-medium">
+              <ul class="flex flex-col md:flex-row text-primary-600 md:text-white md:self-center w-full md:w-auto text-xl md:text-[1.75rem] tracking-[0.01rem] font-medium">
                 {menu.items.map(({ text, href, items }, key) => {
                   const isActive = location.url.pathname === href;
                   return (
@@ -296,32 +296,32 @@ export default component$(() => {
           <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
             <div class="items-center flex mr-2 justify-between w-full md:w-auto gap-2">
               {/* Desktop Audio Button */}
-              <button
+              {/* <button
                 class="p-2.5 bg-primary-500/80 hover:bg-primary-600/80 transition-all duration-200 group shadow-md hover:shadow-lg"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-              </button>
+              </button> */}
               
-              <a
-                href="#"
-                class="w-full sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-2.5 text-xl font-semibold text-white shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
-                role="button"
-                aria-label="Mint NFT"
-              >
-                <span class="relative z-10 flex items-center gap-1">
-                  Mint LIONS
-                  <img
-                    src="/images/sticker.webp"
-                    alt="Jar Icon"
-                    class="w-8 h-8 transform transition-transform duration-300 -ml-1 group-hover:scale-110 group-active:scale-100"
-                  />
-                </span>
-                <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
-              </a>
+         <a
+            href="https://kaspa.com/nft/collections/LUXLIONS"
+            class=" hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-1 text-2xl font-semibold  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
+            role="button"
+            aria-label="Mint NFT"
+          >
+            <span class="relative z-10 text-4xl flex items-center gap-1">
+              MINT
+              <img
+                src="/images/logo.png"
+                alt="Jar Icon"
+                class="w-8 h-8  transform transition-transform duration-300 group-hover:scale-110 group-active:scale-100"
+              />
+            </span>
+            <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
+          </a>
             </div>
           </div>
         </div>

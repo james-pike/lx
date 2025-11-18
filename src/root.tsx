@@ -53,7 +53,7 @@ export default component$(() => {
   <ServiceWorkerRegister />
   {/* Image preloads with correct types */}
 </head>
-      <body class="bg-white antialiased sm:hidden ">
+      <body class="bg-white antialiased  ">
         <ThemeProvider
           attribute="class"
           enableSystem={false}

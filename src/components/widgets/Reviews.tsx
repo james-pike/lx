@@ -9,17 +9,18 @@ export default component$(() => {
 
   const images = Array.from({ length: 7 }, (_, i) => `c${i + 1}.png`);
   const isPlaying = useSignal<boolean>(false);
-  const slidesPerViewSig = useSignal(2); // Changed from 1.3 to 2
+  // Initialize based on screen size to prevent flash - use 4 for desktop (768px+), 2 for mobile
+  const slidesPerViewSig = useSignal(5);
 
   // Update slidesPerView based on screen size
   useVisibleTask$(({ cleanup }) => {
     isPlaying.value = true;
 
     const updateSlidesPerView = () => {
-      if (window.matchMedia('(min-width: 640px)').matches) {
-        slidesPerViewSig.value = 2; // Larger screens
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        slidesPerViewSig.value = 5; // Desktop - 4 slides
       } else {
-        slidesPerViewSig.value = 2; // Mobile - or change this to 1.3 if you want mobile different
+        slidesPerViewSig.value = 2; // Mobile - 2 slides
       }
     };
 
@@ -32,12 +33,12 @@ export default component$(() => {
 
   return (
     <>
-      <Card.Root class="p-3 md:p-8 bg-[#29b9b0] max-w-6xl mx-auto">
+      <Card.Root class="p-3 md:p-10 bg-[#29b9b0] ">
         {/* <Heading /> */}
       <Carousel.Root
   class="carousel-root"
   slidesPerView={slidesPerViewSig.value}
-  gap={12}
+  gap={35}
   autoPlayIntervalMs={2500}
   bind:autoplay={isPlaying}
   draggable={true}
@@ -46,8 +47,8 @@ export default component$(() => {
           <Carousel.Scroller class="carousel-scroller">
             {images.map((image) => (
               <Carousel.Slide key={image} class="">
-                <Card.Root>
-                  <img src={`/images/${image}`} class="w-full object-cover" alt={`Slide ${image}`} />
+                <Card.Root class="md:h-48 overflow-hidden">
+                  <img src={`/images/${image}`} class="w-full md:h-48 object-cover" alt={`Slide ${image}`} />
                 </Card.Root>
               </Carousel.Slide>
             ))}

@@ -12,102 +12,14 @@ export default component$(() => {
 
   // Add custom animation styles
   useStyles$(`
-    .carousel-slide {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: translateY(0);
-      opacity: 1;
-    }
-    
-    .carousel-slide:not([data-active]) {
-      transform: translateY(10px);
-      opacity: 0.7;
-    }
-    
-    .carousel-slide[data-active] {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    
-    .carousel-slide[data-active] .phase-content {
-      animation: slideInFromRight 0.5s ease-out;
-    }
-    
-    .carousel-slide[data-active] .milestone-item {
-      animation: fadeInUp 0.4s ease-out both;
-    }
-    
-    .carousel-slide[data-active] .milestone-item:nth-child(1) {
-      animation-delay: 0.1s;
-    }
-    
-    .carousel-slide[data-active] .milestone-item:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    
-    .carousel-slide[data-active] .milestone-item:nth-child(3) {
-      animation-delay: 0.3s;
-    }
-    
-    .carousel-slide[data-active] .milestone-item:nth-child(4) {
-      animation-delay: 0.4s;
-    }
-    
-    .milestone-item {
-      opacity: 0;
-      transform: translateY(10px) translateX(10px);
-    }
-    
-    .carousel-step span {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .carousel-step[data-active] span {
-      transform: scale(1.02);
-      animation: pulseOnce 0.3s ease-out;
-    }
-    
-    .phase-content {
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: translateX(0);
-      opacity: 1;
-    }
-    
-    @keyframes slideInFromRight {
-      from {
-        transform: translateX(20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(10px) translateX(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) translateX(0);
-      }
-    }
-    
-    @keyframes pulseOnce {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1.02); }
-    }
-    
     /* Progress dot animations */
     .progress-separator {
       position: relative;
       overflow: hidden;
-      background: #e5e7eb !important; /* gray-200 */
+      background: #e5e7eb !important;
       transition: all 0.3s ease;
     }
-    
+
     .progress-separator::after {
       content: '';
       position: absolute;
@@ -120,28 +32,28 @@ export default component$(() => {
       border-radius: inherit;
       z-index: 1;
     }
-    
+
     .progress-separator.active::after {
       height: 100%;
       animation: fillProgress 3s linear forwards;
     }
-    
+
     .progress-separator.user-controlled {
       background: #70C7BA !important;
     }
-    
+
     .progress-separator.user-controlled::after {
       display: none;
     }
-    
+
     .progress-separator.completed {
       background: #70C7BA !important;
     }
-    
+
     .progress-separator.completed::after {
       display: none;
     }
-    
+
     @keyframes fillProgress {
       from {
         height: 0%;
@@ -151,8 +63,6 @@ export default component$(() => {
       }
     }
   `);
-
-  const space = { marginBlock: '1rem' };
 
   // Signal to control autoplay state
   const isPlaying = useSignal<boolean>(false);
@@ -182,55 +92,49 @@ export default component$(() => {
     }
   });
 
-  // 4 phases of a web design and development agency roadmap
+  // 6 phases of the Lux Lions roadmap
   const roadmapPhases = [
     {
       headline: 'Phase 1:',
-      title: 'The Pride Awakens',
+      title: '$LION Deployment on Kasplex',
       icon: '🦁',
-      description: 'Launch the Lux Lions collection on Kaspa and establish our foundation with exclusive minting opportunities.',
-      milestones: [
-        'Genesis mint of 1000 unique Lux Lions',
-        'Launch $LION token on Kaspa',
-        'Activate Discord community with holders',
-        'List on major Kaspa NFT marketplaces',
-      ],
+      description: '$LION officially launched on Kasplex, establishing the foundation of the Lux Lions ecosystem.',
+      milestones: [],
     },
     {
       headline: 'Phase 2:',
-      title: 'Building the Kingdom',
-      icon: '👑',
-      description: 'Expand utility and rewards for our pride members through exclusive benefits and Kaspa ecosystem partnerships.',
-      milestones: [
-        'Launch staking program with $LION',
-        'Introduce exclusive merch store',
-        'Collaborate with top Kaspa NFT projects',
-        'Host virtual metaverse events',
-      ],
+      title: '$LUXLIONS Deployment on KaspaCom',
+      icon: '🎨',
+      description: 'The Lux Lions NFT collection goes live on KaspaCom, opening minting to the public.',
+      milestones: [],
     },
     {
       headline: 'Phase 3:',
-      title: 'The Luxury Safari',
-      icon: '✨',
-      description: 'Transform digital ownership into real-world experiences with luxury rewards and physical collectibles.',
-      milestones: [
-        'Launch physical collectible program',
-        'Partner with luxury brands for perks',
-        'Host exclusive IRL events',
-        'Airdrop rare companion NFTs to holders',
-      ],
+      title: 'Buy & Burn 35% of $LION Supply',
+      icon: '🔥',
+      description: '10% of total mint funds will be used to buy and burn 35% of the entire $LION token supply.',
+      milestones: [],
     },
     {
       headline: 'Phase 4:',
-      title: 'Legacy & Beyond',
+      title: 'Website Deployment',
+      icon: '🌐',
+      description: 'A dedicated Lux Lions website will go live, centralizing project information and future utilities.',
+      milestones: [],
+    },
+    {
+      headline: 'Phase 5:',
+      title: 'Exclusive Airdrop Collection',
+      icon: '🎁',
+      description: 'A special holders-only airdrop collection will be released.',
+      milestones: [],
+    },
+    {
+      headline: 'Phase 6:',
+      title: 'Coming Soon',
       icon: '🚀',
-      description: 'Establish Lux Lions as a lasting brand with gaming integration, DAO governance, and continuous innovation.',
-      milestones: [
-        'Launch play-to-earn game featuring Lions',
-        'Implement DAO for community governance',
-        'Create scholarship fund for artists',
-        'Expand into Gen 2 collections',
-      ],
+      description: 'Further expansion and ecosystem developments will be revealed.',
+      milestones: [],
     },
   ];
   // Bind to carousel's selectedIndex for reactive updates
@@ -254,7 +158,7 @@ export default component$(() => {
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-4 md:p-8 pt-8 max-w-6xl border-2 bg-[#B6B6B6]/40 mx-auto">
+        <Card.Root class="p-4 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
           <Heading
             title="Roadmap"
             subtitle="Our process from start to finish."
@@ -343,7 +247,7 @@ export default component$(() => {
                       >
                         <span
                           class={cn(
-                            '!text-lg md:text-base font-medium px-3 py-1',
+                            '!text-xl md:text-3xl font-medium px-3 py-1',
                             selectedIndex.value === index ? 'bg-lux-green text-white' : 'bg-transparent'
                           )}
                         >
@@ -353,20 +257,19 @@ export default component$(() => {
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
-                        style={space}
-                        class="carousel-slide p-3 text-md md:p-4 !mt-2 bg-lux-green/10 shadow-sm"
+                        class="p-2 md:p-3 !mt-2 bg-lux-green/10 shadow-sm transition-opacity duration-300"
                         key={`slide-${index}`}
                       >
-                        <div class="phase-content">
-                          <p class="mb-3">{phase.description}</p>
-                          <ul class="list-disc list-outside pl-5 space-y-1">
+                        <p class="mb-0 text-lg md:text-2xl leading-snug">{phase.description}</p>
+                        {phase.milestones && phase.milestones.length > 0 && (
+                          <ul class="list-disc list-outside pl-5 space-y-1 mt-2">
                             {phase.milestones.map((milestone, i) => (
-                              <li key={`milestone-${i}`} class="milestone-item text-md leading-relaxed">
+                              <li key={`milestone-${i}`} class="text-xl md:text-2xl leading-relaxed">
                                 {milestone}
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        )}
                       </Carousel.Slide>
                     </>
                   ))}

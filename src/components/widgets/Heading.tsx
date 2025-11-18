@@ -14,7 +14,7 @@ export default component$<HeadingProps>(({ title, subtitle, icon }) => {
       <div class="flex items-center gap-2 px-0 justify-between space-y-1">
         <div>
           <div class="flex items-center">
-            <h4 class="text-3xl md:text-4xl pl-3 pb-1 pt-2 font-medium leading-none">
+            <h4 class="text-4xl md:text-6xl pl-3 pb-1 pt-2 font-medium leading-none">
               {title}
             </h4>
           </div>

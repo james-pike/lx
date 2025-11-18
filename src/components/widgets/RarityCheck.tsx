@@ -159,7 +159,7 @@ export default component$(() => {
               {/* Info Section */}
               <div class="flex flex-col justify-center space-y-6">
                 <div>
-                  <h2 class="text-3xl font-bold text-white mb-0 ml-1">
+                  <h2 class="text-3xl md:text-4xl font-bold text-white mb-0 ml-1">
                     Lux Lion #{nftData.value.id}
                   </h2>
                 </div>
@@ -168,18 +168,18 @@ export default component$(() => {
                 <div class="grid grid-cols-2 gap-2">
                   {/* Rarity Tier */}
                   <div class="bg-white/20 p-4">
-                    <p class="text-gray-400 text-sm mb-1">Rarity Tier</p>
-                    <p class={`text-3xl font-bold ${nftData.value.rarityInfo.color}`}>
+                    <p class="text-gray-400 text-sm md:text-base mb-1">Rarity Tier</p>
+                    <p class={`text-3xl md:text-4xl font-bold ${nftData.value.rarityInfo.color}`}>
                       {nftData.value.rarityInfo.text}
                     </p>
                   </div>
 
                   {/* Rarity Rank */}
                   <div class="bg-white/20 p-4">
-                    <p class="text-gray-400 text-sm mb-1">Rarity Rank</p>
-                    <p class="text-2xl font-bold text-white">
+                    <p class="text-gray-400 text-sm md:text-base mb-1">Rarity Rank</p>
+                    <p class="text-2xl md:text-3xl font-bold text-white">
                       {nftData.value.rarityInfo.rank}
-                      <span class="text-gray-500 text-lg"> / {TOTAL_NFTS}</span>
+                      <span class="text-gray-500 text-lg md:text-xl"> / {TOTAL_NFTS}</span>
                     </p>
                   </div>
 
@@ -187,20 +187,20 @@ export default component$(() => {
                   <div class="col-span-2 bg-white/20 p-4 mt-2">
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                       <div>
-                        <p class="text-orange-400 font-bold text-lg">Legendary</p>
-                        <p class="text-gray-400 text-sm">Rank 1–34</p>
+                        <p class="text-orange-400 font-bold text-lg md:text-xl">Legendary</p>
+                        <p class="text-gray-400 text-sm md:text-base">Rank 1–34</p>
                       </div>
                       <div>
-                        <p class="text-purple-400 font-bold text-lg">Mythic</p>
-                        <p class="text-gray-400 text-sm">Rank 35–100</p>
+                        <p class="text-purple-400 font-bold text-lg md:text-xl">Mythic</p>
+                        <p class="text-gray-400 text-sm md:text-base">Rank 35–100</p>
                       </div>
                       <div>
-                        <p class="text-yellow-400 font-bold text-lg">Epic</p>
-                        <p class="text-gray-400 text-sm">Rank 101–500</p>
+                        <p class="text-yellow-400 font-bold text-lg md:text-xl">Epic</p>
+                        <p class="text-gray-400 text-sm md:text-base">Rank 101–500</p>
                       </div>
                       <div>
-                        <p class="text-blue-400 font-bold text-lg">Rare</p>
-                        <p class="text-gray-400 text-sm">Rank 501–1000</p>
+                        <p class="text-blue-400 font-bold text-lg md:text-xl">Rare</p>
+                        <p class="text-gray-400 text-sm md:text-base">Rank 501–1000</p>
                       </div>
                     </div>
                   </div>

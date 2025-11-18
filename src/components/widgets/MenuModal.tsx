@@ -121,10 +121,10 @@ export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
-    { title: "About", href: "/", hasSubmenu: false },
-    { title: "Roadmap", href: "/", badge: null },
-    { title: "Rarity Guide", href: "/", badge: null },
-    { title: "FAQ", href: "/", badge: null },
+    { title: "Story", href: "#story", hasSubmenu: false },
+    { title: "Roadmap", href: "#roadmap", badge: null },
+    { title: "Rarity", href: "#rarity", badge: null },
+    { title: "FAQ", href: "#faq", badge: null },
   ];
 
   return (

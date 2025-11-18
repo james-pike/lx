@@ -33,7 +33,7 @@ export default component$(() => {
   return (
       <div class="bg-[#49EACB
 ]">
-            <Card.Root class="p-0 md:p-8  max-w-6xl mx-auto">
+            <Card.Root class="p-0 md:p-8  max-w-7xl mx-auto">
 
 
     <RarityCheck/>

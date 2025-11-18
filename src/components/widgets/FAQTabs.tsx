@@ -4,47 +4,57 @@ import FAQAccordion from './FAQAccordion';
 import Heading from './Heading';
 
 export default component$(() => {
-  // FAQ data for the category
   const faqs = [
-  {
-    question: "What are Lux Lions?",
-    answer: "Lux Lions are an exclusive NFT collection on the Kaspa blockchain, featuring 1,000 unique digital lion artworks that blend luxury aesthetics with blockchain innovation. Each NFT represents a majestic lion in various regal poses and environments, designed to appeal to collectors who value artistry, scarcity, and community-driven projects."
-  },
-  {
-    question: "How many NFTs are in the collection?",
-    answer: "The Lux Lions collection consists of exactly 1,000 unique NFTs. This limited supply ensures rarity and value appreciation for holders, with each piece hand-crafted by digital artists to capture the fierce elegance of lions in a futuristic, opulent style."
-  },
-  {
-    question: "What is the $LION token and total supply?",
-    answer: "The Lion token ($LION) is the native utility token for the Lux Lions ecosystem, with a fixed total supply of 10 million tokens. It powers staking rewards, governance voting, marketplace fees, and exclusive access to community events, fostering long-term engagement among holders."
-  },
-  {
-    question: "What is the 10% buy and burn mechanism?",
-    answer: "Every Lion token purchase triggers a 10% buy and burn protocol, where 10% of the transaction value is used to repurchase and permanently burn LION tokens from the market. This deflationary mechanism reduces circulating supply over time, potentially increasing token scarcity and value for existing holders."
-  },
- 
-  {
-    question: "What benefits do $LION holders receive?",
-    answer: "Lux Lions holders gain access to exclusive perks, including airdrops of Lion tokens, VIP community governance, real-world merchandise drops, and collaborations with luxury brands. Staking your NFTs or tokens unlocks additional yields, while the collection supports charitable initiatives for wildlife conservation, aligning art with impact."
-  }
-];
-
-
+    {
+      question: "What are Lux Lions?",
+      answer: "Lux Lions is a pixel-art NFT collection built on Kaspa, representing discipline, refinement, and leadership within the Crypto Kingdom. Each Lion reflects the project’s core themes of power, precision, and innovation."
+    },
+    {
+      question: "Are Lux Lions still minting?",
+      answer: "No. Lux Lions are now 100% minted, but there are plenty of great deals available on the KaspaCom L1 Marketplace."
+    },
+    {
+      question: "What is the total supply?",
+      answer: "The total supply of the Lux Lions collection is 1,000 NFTs."
+    },
+    {
+      question: "Is there a token connected to the project?",
+      answer: "Yes. The Lux Lions ecosystem is paired with the $LION token, which was initially deployed on Kasplex."
+    },
+    {
+      question: "How did the $LION buy and burn work?",
+      answer: "10% of total mint funds from Lux Lions were used to buy and burn 35% of the entire $LION supply, and this buy and burn process is now complete."
+    },
+    {
+      question: "Is the website live?",
+      answer: "Yes. The official Lux Lions website is live as of November 18, 2025."
+    },
+    {
+      question: "Are there rarity tiers?",
+      answer: "Yes. Traits and visual categories create natural rarity distinctions within the collection. Full rarity data is revealed after mint."
+    },
+    {
+      question: "Where can I follow updates?",
+      answer: "Official Lux Lions updates are shared on X and through the project’s Telegram channels."
+    }
+  ];
 
   return (
     <>
-      <div class="max-w-5xl mx-auto">
-        <Card.Root class="p-3 pt-6 md:p-5 bg-[#B6B6B6]/40">
-             <Heading
-                      title="FAQ"
-                      icon={
-                         <p class="text-4xl ">?</p>
-                      }
-                    />
-          <Card.Content class="space-y-2 p-1 pb-4">
-            <FAQAccordion faqs={faqs} />
-          </Card.Content>
-        </Card.Root>
+      <div class="bg-[#49EACB]">
+        <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
+          <Card.Root class="p-1 md:p-12 bg-[#B6B6B6]/40 border-2">
+            <Heading
+              title="FAQ"
+              icon={
+                <p class="text-4xl">?</p>
+              }
+            />
+            <Card.Content class="space-y-2 p-1 pb-4">
+              <FAQAccordion faqs={faqs} />
+            </Card.Content>
+          </Card.Root>
+        </div>
       </div>
     </>
   );
