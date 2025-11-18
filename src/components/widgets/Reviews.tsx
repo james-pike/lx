@@ -11,34 +11,37 @@ export default component$(() => {
   const isPlaying = useSignal<boolean>(false);
   // Initialize based on screen size to prevent flash - use 4 for desktop (768px+), 2 for mobile
   const slidesPerViewSig = useSignal(5);
+  const gapSig = useSignal(35);
 
-  // Update slidesPerView based on screen size
+  // Update slidesPerView and gap based on screen size
   useVisibleTask$(({ cleanup }) => {
     isPlaying.value = true;
 
-    const updateSlidesPerView = () => {
+    const updateCarouselSettings = () => {
       if (window.matchMedia('(min-width: 768px)').matches) {
-        slidesPerViewSig.value = 5; // Desktop - 4 slides
+        slidesPerViewSig.value = 5; // Desktop - 5 slides
+        gapSig.value = 35; // Desktop gap
       } else {
         slidesPerViewSig.value = 2; // Mobile - 2 slides
+        gapSig.value = 12; // Mobile gap
       }
     };
 
-    updateSlidesPerView();
-    window.addEventListener('resize', updateSlidesPerView);
+    updateCarouselSettings();
+    window.addEventListener('resize', updateCarouselSettings);
     cleanup(() => {
-      window.removeEventListener('resize', updateSlidesPerView);
+      window.removeEventListener('resize', updateCarouselSettings);
     });
   });
 
   return (
     <>
-      <Card.Root class="p-3 md:p-10 bg-[#29b9b0] ">
+      <Card.Root class="p-3 md:p-8 bg-[#29b9b0] ">
         {/* <Heading /> */}
       <Carousel.Root
   class="carousel-root"
   slidesPerView={slidesPerViewSig.value}
-  gap={35}
+  gap={gapSig.value}
   autoPlayIntervalMs={2500}
   bind:autoplay={isPlaying}
   draggable={true}
@@ -55,7 +58,7 @@ export default component$(() => {
           </Carousel.Scroller>
         </Carousel.Root>
       </Card.Root>
-      <div class="h-6 bg-[#70C7BA]"></div>
+      <div class="h-2 md:h-3 bg-[#70C7BA]"></div>
       </>
   );
 });

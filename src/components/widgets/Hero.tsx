@@ -20,10 +20,10 @@ export default component$(() => {
       <img
         src="/images/banner.png"
         alt="Banner"
-        class=" md:h-55 h-30 md:mx-20  -mt-2 md:-mt-6 "
+        class=" md:h-55 h-30 md:mx-20 md:mx-auto -mt-2 md:-mt-6 "
       />
       </div>
-      <p class="pt-8 px-1 md:px-24 text-white text-4xl text-center"> A pixel art NFT collection of the Crypto Kingdom, ruled by royalty. Embodying power, precision, and innovation.
+      <p class="pt-8 px-3 md:px-24 text-white text-4xl text-center"> A pixel art NFT collection of the Crypto Kingdom, ruled by royalty. Embodying power, precision, and innovation.
       </p>
           <div class="flex gap-6 px-2 flex-wrap justify-center py-8 pb-10">
           <a

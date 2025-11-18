@@ -28,13 +28,13 @@ export default component$(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
     store.isMobile = mediaQuery.matches;
     isInitialized.value = true;
-    
+
     // Initial scroll check
     const initialScrollY = window.scrollY;
     if (initialScrollY >= 10) {
       store.isScrolling = true;
     }
-    
+
     const handler = (e: MediaQueryListEvent) => {
       store.isMobile = e.matches;
     };
@@ -81,10 +81,10 @@ export default component$(() => {
       <header
         id="header"
         class={`
-          sticky top-0 z-40 flex-none mx-auto max-w-7xl 
-          transition-all duration-300 ease-in-out border-primary-500
+          sticky top-0 z-40 flex-none mx-auto max-w-7xl
+          transition-all duration-100 ease-in-out border-primary-500 border-b-[#70C7BA] 
           ${store.isScrolling
-            ? "bg-[#29b9b0] md:bg-primary-100/80 dark:bg-primary-900/80 md:backdrop-blur-sm"
+            ? "bg-[#29b9b0] md:bg-primary-100/80 border-b-8 md:border-b-8 dark:bg-primary-900/80 md:backdrop-blur-sm"
             : "bg-[#29b9b0]"
           }
         `}
@@ -93,16 +93,16 @@ export default component$(() => {
           <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
             <a class="flex items-center min-w-[120px] md:min-w-[200px]" href="/">
               {/* Desktop Logo: Always visible, matches MenuModal style */}
-              <img 
-                src="/images/banner.png" 
-                alt="Banner" 
+              <img
+                src="/images/banner.png"
+                alt="Banner"
                 class="hidden md:block w-auto h-14"
               />
-              
+
               {/* Mobile Logo: Bubble mask-like fade-in (opacity + subtle scale for smooth bubble effect) */}
-              <img 
-                src="/images/banner.png" 
-                alt="Banner" 
+              <img
+                src="/images/banner.png"
+                alt="Banner"
                 class={`
                   md:hidden w-auto h-14 transition-all duration-300 ease-out
                   ${store.isScrolling
@@ -123,7 +123,7 @@ export default component$(() => {
               >
                 <LuTwitter class="w-6 h-6 text-white dark:text-secondary-200" />
               </a>
-              
+
               {/* Mobile Social Icons - Telegram */}
               <a
                 href="https://t.me"
@@ -134,7 +134,7 @@ export default component$(() => {
               >
                 <LuSend class="w-6 h-6 text-white dark:text-secondary-200" />
               </a>
-              
+
               {/* Mobile Audio Button */}
               {/* <button
                 class="p-1.5 border-3 left-6 backdrop-blur-sm transition-all duration-300 bg-[#29b9b0] border-white dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
@@ -142,7 +142,7 @@ export default component$(() => {
               >
                 <LuVolume2 class="w-5 h-5 text-white dark:text-secondary-200" />
               </button> */}
-              
+
               <MenuModal />
             </div>
           </div>
@@ -304,8 +304,30 @@ export default component$(() => {
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </button> */}
-              
-         <a
+
+              {/* Desktop Social Icons - Twitter */}
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-1.5 backdrop-blur-sm transition-all duration-300 bg-[#29b9b0] border-white dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
+                aria-label="Twitter"
+              >
+                <LuTwitter class="w-6 h-6 text-white dark:text-secondary-200" />
+              </a>
+
+              {/* Desktop Social Icons - Telegram */}
+              <a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-1.5 backdrop-blur-sm transition-all duration-300 bg-[#29b9b0] border-white dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
+                aria-label="Telegram"
+              >
+                <LuSend class="w-6 h-6 text-white dark:text-secondary-200" />
+              </a>
+
+         {/* <a
             href="https://kaspa.com/nft/collections/LUXLIONS"
             class=" hover:bg-yellow-300 bg-[#e4b138] sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-3 pl-5 py-1 text-2xl font-semibold  shadow-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:bg-white before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500 hover:scale-102 hover:bg-gradient-to-r hover:from-primary-400 hover:via-primary-400 hover:to-primary-300"
             role="button"
@@ -321,7 +343,7 @@ export default component$(() => {
             </span>
             <div class="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/45 to-transparent opacity-0 group-hover:opacity-90 transform group-hover:translate-x-full transition-all duration-500"></div>
-          </a>
+          </a> */}
             </div>
           </div>
         </div>

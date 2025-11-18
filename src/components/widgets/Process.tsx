@@ -158,7 +158,7 @@ export default component$(() => {
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-3 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
+        <Card.Root class="p-6 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
           <Heading
             title="Roadmap"
             // subtitle="Our process from start to finish."
@@ -247,7 +247,7 @@ export default component$(() => {
                       >
                         <span
                           class={cn(
-                            'text-[0.9375rem] md:text-3xl font-medium px-1.5 md:px-3 py-1 whitespace-nowrap',
+                            'text-xl md:text-3xl font-medium px-1.5 md:px-3 py-1 whitespace-nowrap',
                             selectedIndex.value === index ? 'bg-lux-green text-white' : 'bg-transparent'
                           )}
                         >
@@ -257,7 +257,7 @@ export default component$(() => {
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
-                        class="p-2 md:p-3 !mt-2 bg-lux-green/10 shadow-sm transition-opacity duration-300"
+                        class="p-2 md:p-3 !mt-2 bg-white/40 mr-4 shadow-sm transition-opacity duration-300"
                         key={`slide-${index}`}
                       >
                         <p class="mb-0 text-md md:text-2xl leading-snug">{phase.description}</p>
@@ -279,6 +279,7 @@ export default component$(() => {
           </Carousel.Root>
         </Card.Root>
       </Wrapper>
+      
     </>
   );
 });

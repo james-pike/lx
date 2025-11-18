@@ -13,7 +13,7 @@ const Root = (props: PropsOf<typeof HeadlessAccordion.Root>) => (
 
 const Item = component$<PropsOf<typeof HeadlessAccordion.Item>>((props) => {
   return (
-    <HeadlessAccordion.Item {...props} class={cn('border-b', props.class)}>
+    <HeadlessAccordion.Item {...props} class={cn('border-b border-[#70C7BA]', props.class)}>
       <Slot />
     </HeadlessAccordion.Item>
   );
