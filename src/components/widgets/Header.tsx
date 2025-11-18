@@ -126,7 +126,7 @@ export default component$(() => {
 
               {/* Mobile Social Icons - Telegram */}
               <a
-                href="t.me/LuxLionsKas"
+                href="https://t.me/LuxLionsKas"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="p-1.5 backdrop-blur-sm transition-all duration-300 bg-[#29b9b0] border-white dark:border-primary-500 hover:shadow-xl hover:bg-white/45"
