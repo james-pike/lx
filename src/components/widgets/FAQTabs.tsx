@@ -46,12 +46,14 @@ export default component$(() => {
       <div class="bg-[#49EACB]">
         <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
           <Card.Root class="p-1 md:p-12 bg-[#B6B6B6]/40 border-2">
+           <div class="pl-4 pt-4 md:pt-0">
             <Heading
               title="FAQ"
               icon={
                 <p class="text-4xl">?</p>
               }
             />
+            </div>
             <Card.Content class="space-y-2 p-1 pb-1">
               <FAQAccordion faqs={faqs} />
             </Card.Content>

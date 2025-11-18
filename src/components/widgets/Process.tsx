@@ -158,7 +158,7 @@ export default component$(() => {
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-6 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
+        <Card.Root class="p-3 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
           <Heading
             title="Roadmap"
             // subtitle="Our process from start to finish."
@@ -247,7 +247,7 @@ export default component$(() => {
                       >
                         <span
                           class={cn(
-                            'text-xl md:text-3xl font-medium px-1.5 md:px-3 py-1 whitespace-nowrap',
+                            'text-lg md:text-[1.7rem] font-medium px-1.5 md:px-3 py-1 break-words',
                             selectedIndex.value === index ? 'bg-lux-green text-white' : 'bg-transparent'
                           )}
                         >
@@ -257,14 +257,14 @@ export default component$(() => {
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
-                        class="p-2 md:p-3 !mt-2 bg-white/40 mr-4 shadow-sm transition-opacity duration-300"
+                        class="p-2 md:p-3 !mt-2 bg-white/40 mr-2 md:mr-4 shadow-sm transition-opacity duration-300"
                         key={`slide-${index}`}
                       >
-                        <p class="mb-0 text-md md:text-2xl leading-snug">{phase.description}</p>
+                        <p class="mb-0 text-base md:text-xl leading-snug">{phase.description}</p>
                         {phase.milestones && phase.milestones.length > 0 && (
                           <ul class="list-disc list-outside pl-5 space-y-1 mt-2">
                             {phase.milestones.map((milestone, i) => (
-                              <li key={`milestone-${i}`} class="text-xl md:text-2xl leading-relaxed">
+                              <li key={`milestone-${i}`} class="text-base md:text-xl leading-relaxed">
                                 {milestone}
                               </li>
                             ))}
