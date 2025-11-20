@@ -100,6 +100,7 @@ export default component$(() => {
       icon: '🦁',
       description: '$LION officially launched on Kasplex, establishing the foundation of the Lux Lions ecosystem.',
       milestones: [],
+      image: '/images/c3.png',
     },
     {
       headline: 'Phase 2:',
@@ -107,6 +108,7 @@ export default component$(() => {
       icon: '🎨',
       description: 'The Lux Lions NFT collection goes live on KaspaCom, opening minting to the public.',
       milestones: [],
+      image: '/images/c2.png',
     },
     {
       headline: 'Phase 3:',
@@ -114,6 +116,7 @@ export default component$(() => {
       icon: '🔥',
       description: '10% of total mint funds will be used to buy and burn 35% of the entire $LION token supply.',
       milestones: [],
+      image: '/images/c1.png',
     },
     {
       headline: 'Phase 4:',
@@ -121,6 +124,7 @@ export default component$(() => {
       icon: '🌐',
       description: 'A dedicated Lux Lions website will go live, centralizing project information and future utilities.',
       milestones: [],
+      image: '/images/c5.png',
     },
     {
       headline: 'Phase 5:',
@@ -128,6 +132,7 @@ export default component$(() => {
       icon: '🎁',
       description: 'A special holders-only airdrop collection will be released.',
       milestones: [],
+      image: '/images/c6.png',
     },
     {
       headline: 'Phase 6:',
@@ -135,6 +140,7 @@ export default component$(() => {
       icon: '🚀',
       description: 'Further expansion and ecosystem developments will be revealed.',
       milestones: [],
+      image: '/images/c7.png',
     },
   ];
   // Bind to carousel's selectedIndex for reactive updates
@@ -150,15 +156,10 @@ export default component$(() => {
     previousIndex.value = selectedIndex.value;
   });
 
-  // Compute background opacity based on selected index
-  const bgOpacity = useComputed$(() => {
-    return (selectedIndex.value + 1) * 10;
-  });
-
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-2 pl-5 md:p-16 pt-8 max-w-7xl border-2 bg-[#49EACB]/70 mx-auto">
+        <Card.Root class="p-2 pl-5 md:p-16 pt-8 max-w-7xl border-2 bg-gradient-to-br from-[#49EACB]/60 via-[#70C7BA]/50 to-[#2D9B8E]/60 mx-auto">
           <Heading
             title="Roadmap"
             // subtitle="Our process from start to finish."
@@ -199,10 +200,13 @@ export default component$(() => {
             bind:autoplay={isPlaying}
           >
             <div class="flex flex-row gap-5 w-full">
-              <div
-                class="w-1/3 hidden md:block aspect-square bg-lux-green"
-                style={`opacity: ${bgOpacity.value}%`}
-              />
+              <div class="w-1/3 hidden md:block aspect-square overflow-hidden rounded-lg border-2 border-gray-300 shadow-lg">
+                <img
+                  src={roadmapPhases[selectedIndex.value].image}
+                  alt={roadmapPhases[selectedIndex.value].title}
+                  class="w-full h-full object-cover"
+                />
+              </div>
               <div class="flex flex-row items-start w-full md:flex-1">
                 {/* Vertical progress line */}
                 <div class="flex flex-col items-center justify-start w-2 mr-3">
@@ -248,23 +252,26 @@ export default component$(() => {
                         <span
                           class={cn(
                             'text-lg md:text-[1.7rem] font-medium px-1.5 md:px-3 py-1 break-words',
-                            selectedIndex.value === index ? 'bg-lux-green text-white' : 'bg-transparent'
+                            selectedIndex.value === index ? 'bg-[#2D9B8E] text-white shadow-md' : 'bg-transparent text-gray-800'
                           )}
                         >
-                          <span class="bg-white/40 py-1 pl-1.5 md:pl-2 -ml-1.5 md:-ml-2 mr-1 md:mr-1.5"> {phase.headline} </span>
+                          <span class={cn(
+                            "py-1 pl-1.5 md:pl-2 -ml-1.5 md:-ml-2 mr-1 md:mr-1.5",
+                            selectedIndex.value === index ? 'bg-white/30' : 'bg-gray-200/60'
+                          )}> {phase.headline} </span>
                           {phase.title}
                           <span class="ml-0.5 md:ml-1">{phase.icon}</span>
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
-                        class="p-2 md:p-3 !mt-2 bg-white/40 mr-2 md:mr-4 shadow-sm transition-opacity duration-300"
+                        class="p-2 md:p-3 !mt-2 bg-gray-100/90 mr-2 md:mr-4 shadow-sm transition-opacity duration-300 border border-gray-300"
                         key={`slide-${index}`}
                       >
-                        <p class="mb-0 text-base md:text-xl leading-snug">{phase.description}</p>
+                        <p class="mb-0 text-base md:text-xl leading-snug text-gray-800">{phase.description}</p>
                         {phase.milestones && phase.milestones.length > 0 && (
                           <ul class="list-disc list-outside pl-5 space-y-1 mt-2">
                             {phase.milestones.map((milestone, i) => (
-                              <li key={`milestone-${i}`} class="text-base md:text-xl leading-relaxed">
+                              <li key={`milestone-${i}`} class="text-base md:text-xl leading-relaxed text-gray-800">
                                 {milestone}
                               </li>
                             ))}

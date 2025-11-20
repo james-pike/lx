@@ -22,7 +22,7 @@ export default component$(() => {
     {
       title: "About",
       items: [
-        { title: "About", href: "#about" },
+        { title: "Story", href: "#story" },
         { title: "Roadmap", href: "#roadmap" },
                         { title: "FAQ", href: "#faq" },
 
@@ -31,9 +31,10 @@ export default component$(() => {
     {
       title: "Resources",
       items: [
-        { title: "Rarity Guide", href: "#rarity" },
 
         { title: "KaspaCom", href: "https://www.kaspa.com/nft/collections/LUXLIONS" },
+                { title: "$LION Token", href: "https://lfg.kaspa.com/app/token/0x2e3bcFa281A70c09b83DeB5d6553e2130756905d" },
+
       ],
     },
   ];
@@ -126,7 +127,7 @@ export default component$(() => {
         </div>
 
         <div class="md:flex md:items-center dark:border-gray-700 md:justify-between pb-6 pt-0 md:pb-8">
-          <div class="!text-md md:!text-xl text-gray-200 mr-4 dark:text-slate-400">
+          <div class="!text-md md:!text-xl text-white mr-4 dark:text-slate-400">
             © {new Date().getFullYear()} Lux Lions
           </div>
         </div>

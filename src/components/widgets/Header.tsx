@@ -70,7 +70,7 @@ export default component$(() => {
     items: [
       { text: "Story", href: "#story" },
       { text: "Roadmap", href: "#roadmap" },
-      { text: "Rarity", href: "#rarity" },
+      { text: "Token", href: "https://lfg.kaspa.com/app/token/0x2e3bcFa281A70c09b83DeB5d6553e2130756905d" },
       { text: "FAQ", href: "#faq" },
     ],
   };

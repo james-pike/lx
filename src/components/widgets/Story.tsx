@@ -32,7 +32,7 @@ export default component$(() => {
   return (
     <div class="bg-[#49EACB]">
       <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
-        <Card.Root class="p-6 md:p-12 bg-[#B6B6B6]/40 border-2">
+        <Card.Root class="p-6 md:p-12 bg-[#4A4A4A]/70 border-2">
           <Heading
             title="Story"
             icon={
@@ -41,7 +41,7 @@ export default component$(() => {
           />
 
           {/* Desktop Version - All paragraphs visible in a row */}
-          <div class="hidden md:flex md:gap-6 text-gray-800 dark:text-gray-200">
+          <div class="hidden md:flex md:gap-6 text-white">
             {storyParagraphs.map((paragraph, index) => (
               <p key={index} class="flex-1 text-lg md:text-2xl leading-relaxed">
                 {paragraph}
@@ -54,13 +54,19 @@ export default component$(() => {
             <Carousel.Root
               bind:selectedIndex={selectedIndex}
               gap={20}
+              sensitivity={{ mouse: 2.5, touch: 2.5 }}
             >
               <Carousel.Scroller class="w-full">
                 {storyParagraphs.map((paragraph, index) => (
                   <Carousel.Slide key={index} class="w-full">
-                    <p class="text-lg leading-relaxed text-gray-800 dark:text-gray-200 px-2">
-                      {paragraph}
-                    </p>
+                    <div class="relative">
+                      <p class="text-xl leading-relaxed text-white px-2">
+                        {paragraph}
+                      </p>
+                      <div class="absolute top-0 right-2 text-white/60 text-sm font-medium">
+                        {index + 1}/3
+                      </div>
+                    </div>
                   </Carousel.Slide>
                 ))}
               </Carousel.Scroller>
