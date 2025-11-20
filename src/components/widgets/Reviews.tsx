@@ -50,7 +50,7 @@ export default component$(() => {
           <Carousel.Scroller class="carousel-scroller">
             {images.map((image) => (
               <Carousel.Slide key={image} class="">
-                <Card.Root class="md:h-48 overflow-hidden">
+                <Card.Root class="md:h-48 overflow-hidden ">
                   <img src={`/images/${image}`} class="w-full md:h-48 object-cover" alt={`Slide ${image}`} />
                 </Card.Root>
               </Carousel.Slide>

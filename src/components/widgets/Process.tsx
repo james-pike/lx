@@ -16,7 +16,7 @@ export default component$(() => {
     .progress-separator {
       position: relative;
       overflow: hidden;
-      background: #e5e7eb !important;
+      background: rgba(255, 255, 255, 0.3) !important;
       transition: all 0.3s ease;
     }
 
@@ -27,7 +27,7 @@ export default component$(() => {
       left: 0;
       right: 0;
       height: 0%;
-      background: #70C7BA;
+      background: rgba(255, 255, 255, 0.9);
       transition: height 3s linear;
       border-radius: inherit;
       z-index: 1;
@@ -39,7 +39,7 @@ export default component$(() => {
     }
 
     .progress-separator.user-controlled {
-      background: #70C7BA !important;
+      background: rgba(255, 255, 255, 0.9) !important;
     }
 
     .progress-separator.user-controlled::after {
@@ -47,7 +47,7 @@ export default component$(() => {
     }
 
     .progress-separator.completed {
-      background: #70C7BA !important;
+      background: rgba(255, 255, 255, 0.9) !important;
     }
 
     .progress-separator.completed::after {
@@ -159,7 +159,7 @@ export default component$(() => {
   return (
     <>
       <Wrapper>
-        <Card.Root class="p-2 pl-5 md:p-16 pt-8 max-w-7xl border-2 bg-gradient-to-br from-[#49EACB]/60 via-[#70C7BA]/50 to-[#2D9B8E]/60 mx-auto">
+        <Card.Root class="p-2 pl-5 md:p-16 pt-8 max-w-7xl border-2 bg-gradient-to-br from-[#70C7BA] to-[#29b9b0] mx-auto">
           <Heading
             title="Roadmap"
             // subtitle="Our process from start to finish."
@@ -200,7 +200,7 @@ export default component$(() => {
             bind:autoplay={isPlaying}
           >
             <div class="flex flex-row gap-5 w-full">
-              <div class="w-1/3 hidden md:block aspect-square overflow-hidden rounded-lg border-2 border-gray-300 shadow-lg">
+              <div class="w-1/3 hidden md:block aspect-square overflow-hidden rounded-lg border-2 border-white/40 shadow-lg">
                 <img
                   src={roadmapPhases[selectedIndex.value].image}
                   alt={roadmapPhases[selectedIndex.value].title}
@@ -213,7 +213,7 @@ export default component$(() => {
                   {roadmapPhases.map((_, index) => (
                     <>
                       <div
-                        class="w-1 h-0 bg-gray-200"
+                        class="w-1 h-0 bg-white/30"
                         style={{ marginTop: index === 0 ? '1rem' : '0.5rem' }}
                         key={`spacer-${index}`}
                       />
@@ -252,26 +252,26 @@ export default component$(() => {
                         <span
                           class={cn(
                             'text-lg md:text-[1.7rem] font-medium px-1.5 md:px-3 py-1 break-words',
-                            selectedIndex.value === index ? 'bg-[#2D9B8E] text-white shadow-md' : 'bg-transparent text-gray-800'
+                            selectedIndex.value === index ? 'bg-white/90 text-gray-900 shadow-md' : 'bg-transparent text-white'
                           )}
                         >
                           <span class={cn(
                             "py-1 pl-1.5 md:pl-2 -ml-1.5 md:-ml-2 mr-1 md:mr-1.5",
-                            selectedIndex.value === index ? 'bg-white/30' : 'bg-gray-200/60'
+                            selectedIndex.value === index ? 'bg-[#49EACB]/40' : 'bg-white/20'
                           )}> {phase.headline} </span>
                           {phase.title}
                           <span class="ml-0.5 md:ml-1">{phase.icon}</span>
                         </span>
                       </Carousel.Step>
                       <Carousel.Slide
-                        class="p-2 md:p-3 !mt-2 bg-gray-100/90 mr-2 md:mr-4 shadow-sm transition-opacity duration-300 border border-gray-300"
+                        class="p-2 md:p-3 !mt-2 bg-white/50 mr-2 md:mr-4 shadow-sm transition-opacity duration-300 border border-white/30"
                         key={`slide-${index}`}
                       >
-                        <p class="mb-0 text-base md:text-xl leading-snug text-gray-800">{phase.description}</p>
+                        <p class="mb-0 text-base md:text-xl leading-snug text-gray-900">{phase.description}</p>
                         {phase.milestones && phase.milestones.length > 0 && (
                           <ul class="list-disc list-outside pl-5 space-y-1 mt-2">
                             {phase.milestones.map((milestone, i) => (
-                              <li key={`milestone-${i}`} class="text-base md:text-xl leading-relaxed text-gray-800">
+                              <li key={`milestone-${i}`} class="text-base md:text-xl leading-relaxed text-gray-900">
                                 {milestone}
                               </li>
                             ))}

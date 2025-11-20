@@ -30,15 +30,17 @@ export default component$(() => {
   ];
 
   return (
-    <div class="bg-[#49EACB]">
+    <div class="bg-[#49EACB] texture">
       <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
-        <Card.Root class="p-6 md:p-12 bg-[#4A4A4A]/70 border-2">
-          <Heading
-            title="Story"
-            icon={
-              <LuBookOpen class="-mt-4 w-8 h-8 text-black" />
-            }
-          />
+        <Card.Root class="p-4 md:p-12 bg-[#B6B6B6]/40 my">
+          <div class="text-white">
+            <Heading
+              title="Story"
+              icon={
+                <LuBookOpen class="-mt-4 w-8 h-8 text-white" />
+              }
+            />
+          </div>
 
           {/* Desktop Version - All paragraphs visible in a row */}
           <div class="hidden md:flex md:gap-6 text-white">
@@ -63,24 +65,16 @@ export default component$(() => {
                       <p class="text-xl leading-relaxed text-white px-2">
                         {paragraph}
                       </p>
-                      <div class="absolute top-0 right-2 text-white/60 text-sm font-medium">
-                        {index + 1}/3
-                      </div>
                     </div>
                   </Carousel.Slide>
                 ))}
               </Carousel.Scroller>
 
-              {/* Carousel Navigation Dots */}
-              <div class="flex justify-center gap-2 mt-6">
-                {storyParagraphs.map((_, index) => (
-                  <button
-                    key={index}
-                    class={`story-carousel-dot ${selectedIndex.value === index ? 'active' : ''}`}
-                    onClick$={() => { selectedIndex.value = index; }}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
+              {/* Carousel Counter */}
+              <div class="flex justify-center items-center mt-6">
+                <span class="text-white/60 text-sm font-medium">
+                  {selectedIndex.value + 1}/3
+                </span>
               </div>
             </Carousel.Root>
           </div>

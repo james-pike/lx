@@ -1,4 +1,4 @@
-import { component$, Slot, type PropsOf } from '@builder.io/qwik';
+import { component$, Slot } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
 
 export const Wrapper = component$<{ class?: string }>((props) => {

@@ -41,11 +41,10 @@ export default component$(() => {
 
   return (
     <>
-                <div class="h-2 md:h-3 bg-[#70C7BA]"></div>
 
-      <div class="bg-[#49EACB]">
+      <div class="bg-[#49EACB] lisbon">
         <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
-          <Card.Root class="p-1 md:p-12 bg-[#B6B6B6]/40 ">
+          <Card.Root class="p-1 md:p-12 bg-[#B6B6B6]/40 my">
            <div class="pl-4 pt-4 md:pt-0">
             <Heading
               title="FAQ"
